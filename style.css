@@ -4,9 +4,13 @@
 
 .marquee {
     display: flex;
+    position: fixed;
+    z-index: 10;
     justify-content: flex-start;
-    background: aqua;
+    background: #B6E9FF;
+    color: #007CB1;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .marquee h1 {
@@ -27,6 +31,29 @@
     }
 }
 
+span {
+    font-style: italic;
+    color: #ff6a00;
+}
+
+.project img {
+    max-width: 90%;
+    border-radius: 5px;
+    background: rgba(0, 0, 255, 0.5);
+    filter: sepia(100%) hue-rotate(180deg) saturate(120%);
+    transition: filter ease-in, transform 0.3s ease-in-out;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project img:hover {
+    filter: none;
+    transform: scale(1.05);
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
 .project-description {
     position: relative;
     padding-left: 50px;
@@ -45,6 +72,29 @@
 .project h1 {
     position: relative;
     margin-top: 20px; 
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.title-container {
+    margin-bottom: 20px;
+}
+
+.bullet-point {
+    margin-bottom: 15px;
+}
+
+.bullet-point h3 {
+    font-weight: bold;
+}
+
+#colon-text {
+    font-weight: 400;
+    color: #007CB1;
+}
+
+.project h2, h3 {
+    color: #007CB1;
 }
 
 .project h1::before {
@@ -58,5 +108,70 @@
     background-color: #555; 
     border-radius: 50%;
     z-index: 1;
+}
+
+p {
+    max-width: 430px;
+    padding-right: 30px;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.bullet-point h2, .bullet-point h3 {
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.nav ol {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #B6E9FF;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.nav span {
+    font-weight: bold;
+}
+
+@media (min-width: 560px) {
+
+    .project-description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        gap: 5px;
+    }
+
+    .project-description::before, .project h1::before {
+        display: none;
+    }
+
+    /* .project-description p {
+        margin-right: 30px;
+    } */
+}
+
+
+@media (min-width: 1020px) {
+    .project-description {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .project-description {
+        display: flex;
+    }
 }
 
