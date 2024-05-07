@@ -2,15 +2,20 @@
     font-family: 'Tahoma', sans-serif;
 }
 
+header {
+    position: fixed;
+    z-index: 1000;
+    background-color: #fff;
+}
+
 .marquee {
     display: flex;
-    position: fixed;
-    z-index: 10;
+    /* position: fixed; */
+    z-index: 100;
     justify-content: flex-start;
-    background: #B6E9FF;
+    /* background: #B6E9FF; */
     color: #007CB1;
     overflow: hidden;
-    margin-bottom: 30px;
 }
 
 .marquee h1 {
@@ -57,6 +62,7 @@ span {
 .project-description {
     position: relative;
     padding-left: 50px;
+    padding-top: 30px;
 }
 
 .project-description::before {
@@ -143,12 +149,37 @@ p {
     font-weight: bold;
 }
 
+footer {
+    background: linear-gradient(to bottom, rgba(212, 242, 255, 0) 0%, #d4f2ff 100%);
+    color:#77a8bd;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 50px 20px 10px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+footer h4 {
+    max-width: 700px;
+    line-height: 1.5;
+}
+
+.gratitude {
+    margin-bottom: 20px;
+}
+
 @media (min-width: 560px) {
 
     .project-description {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 20px;
+        padding-top: 50px;
+        padding: 70px 40px 5px;
         gap: 5px;
     }
 
