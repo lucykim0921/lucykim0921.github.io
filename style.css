@@ -1,0 +1,62 @@
+* {
+    font-family: 'Tahoma', sans-serif;
+}
+
+.marquee {
+    display: flex;
+    justify-content: flex-start;
+    background: aqua;
+    overflow: hidden;
+}
+
+.marquee h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 5px 3rem;
+    white-space: nowrap;
+    animation: move-rtl 20000ms linear infinite;
+}
+
+@keyframes move-rtl {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.project-description {
+    position: relative;
+    padding-left: 50px;
+}
+
+.project-description::before {
+    content: "";
+    position: absolute;
+    left: 20px; 
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #333;
+}
+
+.project h1 {
+    position: relative;
+    margin-top: 20px; 
+}
+
+.project h1::before {
+    content: "";
+    position: absolute;
+    left: -39px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #555; 
+    border-radius: 50%;
+    z-index: 1;
+}
+
